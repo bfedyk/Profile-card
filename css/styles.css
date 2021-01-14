@@ -1,107 +1,88 @@
+/********** Global variables **********/
+
+:root {
+  --cyan: hsl(185, 75%, 39%);
+  --dark-blue: hsl(229, 23%, 23%);
+  --grey-blue: hsl(227, 10%, 46%);
+  --grey: hsl(0, 0%, 59%);
+}
+
+/********** Global properties setting **********/
+
 body {
-  background-color: hsl(185, 75%, 39%);
+  background-color: var(--cyan);
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-.footer-text{
-  font-size: 9px;
-  font-weight: 400;
-  color: hsl(0, 0%, 59%);
+/********** Classes **********/
+
+/* Main containter */
+
+.wrapper {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  /* overflow: hidden; */
+  justify-content: center;
+  align-items: center;
+  /* background: var(--cyan); */
 }
 
-#container {
-  /* background-color: hsl(185, 75%, 39%); */
-}
+/* Top-left-corner container 0 img */
 
-#top-left-corner {
+.top-left-corner {
   display: inline-block;
   position: absolute;
   top: -500px;
   left: -250px;
 }
 
-#bottom-right-corner {
+/* Bottom-right-container - img */
+
+.bottom-right-corner {
   display: inline-block;
   position: absolute;
   right: -200px;
   bottom: -600px;
 }
 
-.card-img-top {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
 
-.location {
-  font-size: 12px;
-  font-weight: 400;
-  color: hsl(0, 0%, 59%);
-  padding-top: 8px;
-}
+/* Bootstrap card  - profile card */
 
-/* .profile-card {
+.profile-card {
   border-radius: 20px;
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
   height: 375px;
   width: 350px;
-  position: absolute;
-  top: 200px;
-  left: 600px; */
-
-  .profile-card {
-    border-radius: 20px;
-    height: 375px;
-    width: 350px;
-    position: relative;
-    top: 200px;
-    left: 600px;
-
-  /* height: 100%; */
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-.profile-name {
-  font-size: 18px;
-  font-weight: 700;
-  text-align: center;
-  position: relative;
-  bottom: 60px;
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-.profile-text {
-  text-align: center;
-  position: relative;
-  bottom: 60px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.age {
-  color: hsl(0, 0%, 59%);
-}
-
-.card-header {
-  padding: 0;
 }
 
 .footer-stats {
-  color: hsl(229, 23%, 23%);
+  /* color: hsl(229, 23%, 23%); */
+  color: var(--dark-blue);
   margin-left: 10px;
   font-size: 18px;
   font-weight: 700;
   text-align: center;
   display: inline-block;
   width: 90px;
+}
+
+.footer-text{
+  font-size: 10px;
+  font-weight: 400;
+  /* color: hsl(0, 0%, 59%); */
+  color: var(--grey);
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .victor-image {
@@ -114,29 +95,46 @@ body {
   bottom: 75px;
 }
 
+
+
+.location {
+  font-size: 12px;
+  font-weight: 400;
+  color: hsl(0, 0%, 59%);
+  padding-top: 8px;
+}
+
+
+
+.profile-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  bottom: 60px;
+}
+
+
+.age {
+  /* color: hsl(0, 0%, 59%); */
+  color: var(--grey);
+}
+
+
+
+
 /********** Media Query Breakpoint **********/
 
-/* @media screen and (max-width: 800px) {
-
-  #container {
-    background: white;
-  } */
-
-  /* .title-image {
-    position: static;
-    transform: rotate(0deg);
-  }
-} */
 
 @media screen and (max-width: 1050px){
-  #top-left-corner {
+  .top-left-corner {
     display: inline-block;
     position: absolute;
     top: -550px;
     left: -700px;
   }
 
-  #bottom-right-corner {
+  .bottom-right-corner {
     display: inline-block;
     position: absolute;
     right: -650px;
