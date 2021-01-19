@@ -100,8 +100,12 @@ body {
 .location {
   font-size: 12px;
   font-weight: 400;
-  color: hsl(0, 0%, 59%);
-  padding-top: 8px;
+  /* color: hsl(0, 0%, 59%); */
+  color: var(--grey);
+  /* padding-top: 8px; */
+  text-align: center;
+  position: relative;
+  bottom: 70px;
 }
 
 
